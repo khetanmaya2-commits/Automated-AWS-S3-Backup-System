@@ -1,0 +1,1 @@
+This is a text file and the backup is stored in aws s3 using ci/cd pipeline
