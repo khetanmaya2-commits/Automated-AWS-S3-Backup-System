@@ -3,3 +3,6 @@ backup/*.tar.gz
 
 # Keep the backup folder
 !backup/.gitkeep
+
+__pycache__/
+*.pyc
