@@ -36,6 +36,7 @@ def upload_backup(s3,file_name, bucket_name, key_name):
     s3.Bucket(bucket_name).put_object(Key=key_name, Body=data)
 
     print("backup uploaded successfully")
+    print("Successful")
 
 
 bucket_name="maya-python-123"
