@@ -7,7 +7,7 @@ A Python automation project that creates compressed `.tar.gz` backups of a direc
 - 📂 Automated directory backup
 - 🗜️ Creates compressed `.tar.gz` archives
 - ⚙️ GitHub Actions CI pipeline
-- 📦 Uploads backup to AWS S#
+- 📦 Uploads backup to AWS S3
 - 🐍 Built using Python
 
 ## 🛠️ Tech Stack
