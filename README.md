@@ -7,7 +7,7 @@ A Python automation project that creates compressed `.tar.gz` backups of a direc
 - 📂 Automated directory backup
 - 🗜️ Creates compressed `.tar.gz` archives
 - ⚙️ GitHub Actions CI pipeline
-- 📦 Uploads backup as a GitHub Actions Artifact
+- 📦 Uploads backup to AWS S#
 - 🐍 Built using Python
 
 ## 🛠️ Tech Stack
@@ -16,6 +16,8 @@ A Python automation project that creates compressed `.tar.gz` backups of a direc
 - Git & GitHub
 - GitHub Actions
 - YAML
+- AWS S3
+- Boto3
 
 ## 📂 Project Structure
 
@@ -23,6 +25,7 @@ A Python automation project that creates compressed `.tar.gz` backups of a direc
 backup-project/
 │
 ├── backups.py
+├── s3_backup.py
 ├── sample_data/
 ├── backup/
 ├── .github/
@@ -44,14 +47,11 @@ backup-project/
             │
     ┌───────┼────────┐
     ▼       ▼        ▼
- Checkout  Setup   Run Backup
-   Code    Python    Script
+ Checkout  Setup   Configure AWS
+   Code    Python      CLI
                      │
                      ▼
-           Create .tar.gz Backup
-                     │
-                     ▼
-          Upload Backup Artifact
+           Create Backup & Upload To AWS S3
                      │
                      ▼
               Pipeline Success ✅
@@ -74,16 +74,15 @@ cd backup-project
 Run the backup script
 
 ```bash
-python backups.py
+python s3_backup.py
 ```
 
-The backup archive will be created inside the **backup/** directory.
+The backup archive will be created and uploaded to the AWS S3 Bucket 
 
 ---
 
 ## 🚀 Future Enhancements
 
-- Upload backups to AWS S3
 - Delete old backups automatically
 - Add logging
 - Schedule daily backups using GitHub Actions
