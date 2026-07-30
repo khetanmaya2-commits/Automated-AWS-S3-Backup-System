@@ -40,11 +40,16 @@ backup-project/
 ├── s3_backup.py
 ├── sample_data/
 ├── backup/
+├── lambda/
+│   └── lambda_function.py
 ├── .github/
 │   └── workflows/
 │       └── ci.yml
+├── screenshots/
+│   ├── s3_bucket.png
+│   ├── lambda-function.png
+│   └── cloudwatch-logs.png
 └── README.md
-
 ```
 
 ## ⚙️ Workflow
