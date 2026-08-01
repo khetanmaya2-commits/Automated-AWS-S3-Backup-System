@@ -39,7 +39,7 @@ def upload_backup(s3,file_name, bucket_name, key_name):
     print("Successful")
 
 
-bucket_name="maya-python-123"
+bucket_name="backup-bucket-maya"
 region="ap-south-1"
 source= "sample_data"
 destination= "backup"
