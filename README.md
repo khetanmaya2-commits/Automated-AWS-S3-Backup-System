@@ -1,6 +1,13 @@
 # 🚀 Automated Backup System with GitHub Actions CI
 
-A Python automation project that creates compressed `.tar.gz` backups of a directory and validates the backup process automatically using GitHub Actions CI.
+# 📌 Project Overview
+
+This project is an **Automated AWS S3 Backup System** built using **Python, Amazon S3, AWS Lambda, IAM, CloudWatch, and GitHub Actions**.
+
+The system automatically creates compressed backups of local files and uploads them to an Amazon S3 bucket through a GitHub Actions CI workflow. Once a backup is uploaded, an **Amazon S3 ObjectCreated** event automatically triggers an **AWS Lambda** function. The Lambda function verifies the uploaded backup, retrieves its metadata, and logs execution details to **Amazon CloudWatch** for monitoring and debugging.
+
+This project demonstrates **automation, CI/CD, secure cloud storage, serverless computing, IAM-based access control, and event-driven architecture** using AWS services.
+
 
 ## 🚀 Features
 
@@ -40,11 +47,16 @@ backup-project/
 ├── s3_backup.py
 ├── sample_data/
 ├── backup/
+├── lambda/
+│   └── lambda_function.py
 ├── .github/
 │   └── workflows/
 │       └── ci.yml
+├── screenshots/
+│   ├── s3_bucket.png
+│   ├── lambda-function.png
+│   └── cloudwatch-logs.png
 └── README.md
-
 ```
 
 ## ⚙️ Workflow
